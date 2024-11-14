@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+    <main>
+        <div class="container">
+            <h1>Download Videos from Supported Platforms</h1>
+            <div class="platform-icons">
+                <i class="fab fa-youtube" title="YouTube"></i>
+                <i class="fab fa-vimeo-v" title="Vimeo"></i>
+                <i class="fab fa-dailymotion" title="Dailymotion"></i>
+                <i class="fab fa-facebook" title="Facebook"></i>
+                <i class="fab fa-instagram" title="Instagram"></i>
+                <i class="fab fa-twitter" title="Twitter"></i>
+                <i class="fab fa-tiktok" title="TikTok"></i>
+                <i class="fab fa-soundcloud" title="SoundCloud"></i>
+                <i class="fab fa-twitch" title="Twitch"></i>
+                <i class="fab fa-reddit" title="Reddit"></i>
+            </div>
+        <div class="container">
+           
+            <div class="instructions">
+                <div class="card">
+                    <h2>Step 1: Copy Video URL</h2>
+                    <p>Go to the video you want to download. Copy the URL from the address bar of your browser. OR through your platform of choice, copy the video URL.</p>
+                </div>
+                <div class="card">
+                    <h2>Step 2: Paste URL</h2>
+                    <p>Paste the copied URL into the input field below.</p>
+                    <input type="text" id="url" placeholder="Enter video URL">
+                </div>
+                <div class="card">
+                    <h2>Step 3: Download Video</h2>
+                    <p>Click the "Download" button to start downloading your video.</p>
+                    <button onclick="downloadVideo()">Download</button>
+                </div>
+                <div id="progress-bar-container" style="display: none;">
+                    <div id="progress-bar"></div>
+                </div>
+                <p id="message"></p>
+            </div>
+        </div>
+    </main>
+    {% include 'footer.html' %}
