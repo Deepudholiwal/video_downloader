@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "manage.py",
-      "use": "@vercel/python",
-      "config": {
-        "pythonVersion": "3.9"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -14,5 +11,10 @@
       "src": "/(.*)",
       "dest": "manage.py"
     }
-  ]
+  ],
+  "env": {
+    "SECRET_KEY": "your-secret-key",
+    "DEBUG": "False",
+    "ALLOWED_HOSTS": "video-downloader-bgfd3pely-dk4796804-gmailcoms-projects.vercel.app"
+  }
 }
