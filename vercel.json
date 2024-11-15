@@ -2,19 +2,19 @@
   "version": 2,
   "builds": [
     {
-      "src": "manage.py",
+      "src": "video_downloader/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "manage.py"
+      "dest": "video_downloader/wsgi.py"
     }
   ],
   "env": {
     "SECRET_KEY": "your-secret-key",
     "DEBUG": "False",
-    "ALLOWED_HOSTS": "video-downloader-bgfd3pely-dk4796804-gmailcoms-projects.vercel.app"
+    "ALLOWED_HOSTS": "video-downloader-m2eqr6cvd-dk4796804-gmailcoms-projects.vercel.app"
   }
 }
