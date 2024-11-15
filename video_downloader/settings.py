@@ -78,16 +78,18 @@ WSGI_APPLICATION = 'video_downloader.wsgi.application'
 
 
 
+import dj_database_url
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Ensure the correct database engine
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# Use PostgreSQL if DATABASE_URL is set
+if 'DATABASE_URL' in os.environ:
+    DATABASES['default'] = dj_database_url.config(default=os.getenv('DATABASE_URL'))
 
 
 
