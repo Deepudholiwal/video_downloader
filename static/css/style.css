@@ -159,6 +159,7 @@ footer {
 
 .platform-icons {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: center;
     margin: 20px 0;
 }
@@ -166,11 +167,32 @@ footer {
 .platform-icons i {
     font-size: 40px; 
     margin: 0 15px;
-    color: #333;
+    padding: 4px;
+    color: #b5cde7;
     transition: transform 0.3s; 
+    flex: 1 1 25%; 
+    max-width: 100px; 
+    box-sizing: border-box; 
 }
 
 .platform-icons i:hover {
     transform: scale(1.2); 
     color: #007bff; 
+}
+
+
+@media (max-width: 768px) {
+    .platform-icons i {
+        font-size: 30px;/
+        margin: 10px; 
+        flex: 1 1 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .platform-icons i {
+        font-size: 24px; 
+        margin: 5px; 
+        flex: 1 1 100%; 
+    }
 }
